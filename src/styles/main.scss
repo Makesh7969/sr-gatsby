@@ -1,10 +1,8 @@
 @import "~bootstrap/scss/bootstrap.scss";
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
-@import './inc/variable';
-@import './inc/mixins';
-@import './inc/global';
-@import './inc/fonts';
+@import './general/variable';
+@import './general/mixins';
+@import './general/global';
+@import './general/fonts';
 
 /* latin-ext */
 @font-face {

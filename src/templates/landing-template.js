@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import "../styles/inc/_global.scss";
+import "../styles/general/_global.scss";
 
 const LandingTemplate = () => {
   return (

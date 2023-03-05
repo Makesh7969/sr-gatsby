@@ -1,15 +1,16 @@
 import { Link } from "gatsby";
 import React from "react";
-import "../styles/inc/_global.scss";
+import Banner from "../components/Banner/Banner";
+import Layout from "../components/Layout/Layout";
+import "../styles/general/_global.scss";
 
 const DefaultTemplate = () => {
   return (
     <div>
-      <h1>HomePage</h1>
-
-      <Link to='/roadshows' className='button button-black'>
-        Go To Roadshows
-      </Link>
+      <Layout>
+        <Banner />
+        <h1>HomePage</h1>
+      </Layout>
     </div>
   );
 };

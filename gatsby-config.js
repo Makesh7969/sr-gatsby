@@ -1,8 +1,38 @@
 const strapiConfig = {
   apiURL: process.env.GATSBY_STRAPI_URL,
   accessToken: process.env.GATSBY_STRAPI_TOKEN,
-  collectionTypes: ["menu", "page", "burger-menu"],
-  singleTypes: [],
+  collectionTypes: [
+    "menu",
+    "page",
+    "burger-menu",
+    {
+      singularName: "page",
+      queryParams: {
+        // Populate media and relations
+        // Make sure to not specify the fields key so the api always returns the updatedAt
+        populate: {
+          Banner_Section: "*",
+          modules: {
+            populate: {
+              CTA: {
+                populate: {
+                  menu: "*",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  ],
+  singleTypes: [
+    {
+      singularName: "site-config",
+    },
+    {
+      singularName: "global-menu",
+    },
+  ],
   remoteFileHeaders: {
     /**
      * Customized request headers

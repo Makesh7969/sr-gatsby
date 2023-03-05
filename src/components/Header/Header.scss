@@ -1,0 +1,54 @@
+@import "../../styles/general/variable";
+@import "../../styles/general/mixins";
+
+.header-wrapper {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: $color-white;
+
+    @media screen and (min-width:$screen-md) {
+        height: 85px;
+    }
+
+    @media screen and (min-width:$screen-xl) {
+        height: 130px;
+    }
+}
+
+.header {
+    align-items: center;
+    display: flex;
+    flex: 1 1;
+    justify-content: space-between;
+
+
+    .header-logo {
+        img {
+            height: 48px;
+            width: 48px;
+
+            @media screen and (min-width:$screen-md) {
+                height: 88px;
+                width: 88px;
+            }
+        }
+    }
+
+    .header-nav {
+        display: flex;
+
+        >*+* {
+            margin-left: 30px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+
+            span {
+                margin-left: 12px;
+            }
+        }
+    }
+}

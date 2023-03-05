@@ -1,0 +1,156 @@
+@import "../../styles/general/variable";
+
+
+.burger-menu-wrap {
+    height: 100vh !important;
+    width: 100vw !important;
+    background-color: $color-black;
+}
+
+.burger-menu-section {
+    padding: 0px !important;
+    max-width: $screen-4xl;
+    width: 100%;
+    margin: 0px auto !important;
+
+    .burger-header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 30px 20px;
+
+        @media screen and (min-width:$screen-md) {
+            padding: 40px 20px;
+        }
+
+        @media screen and (min-width:$screen-xl) {
+            padding: 64px 144px;
+        }
+
+        img {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .burger-body {
+        padding: 0px 20px 40px 20px;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width:$screen-md) {
+            padding: 0px 80px 56px 80px;
+        }
+
+        @media screen and (min-width:$screen-xl) {
+            padding: 0px 144px 80px 144px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @media screen and (min-width:$screen-2xl) {
+            padding: 0px 256px 80px 256px;
+        }
+
+        .left-section {
+            display: flex;
+            flex-direction: column;
+
+            >*+* {
+                margin-top: 24px;
+
+                @media screen and (min-width:$screen-md) {
+                    margin-top: 32px;
+                }
+            }
+
+            .burger-item {
+                font-family: $font-secondary;
+                font-weight: $extra-light;
+                font-size: 40px;
+                line-height: 110%;
+                text-transform: uppercase;
+                border-bottom: 1px solid transparent;
+                transition: $transition;
+                width: fit-content;
+
+                &:hover {
+                    border-bottom: 1px solid $color-white;
+                }
+
+                @media screen and (min-width:$screen-md) {
+                    font-size: 56px;
+                }
+            }
+        }
+
+        .right-section {
+            margin-top: 56px;
+            max-width: 414px;
+
+            @media screen and (min-width:$screen-md) {
+                margin-top: 80px;
+            }
+
+            @media screen and (min-width:$screen-xl) {
+                margin-top: 0px;
+                margin-left: 40px;
+            }
+
+            .title {
+                font-family: $font-base;
+                font-weight: $semi-bold;
+                color: $color-grey;
+                font-size: 12px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .footer-info {
+                display: flex;
+                flex-direction: column;
+                margin-top: 24px;
+
+                @media screen and (min-width:$screen-xl) {
+                    margin-top: 40px;
+                }
+
+                >*+* {
+                    margin-top: 24px;
+
+                    @media screen and (min-width:$screen-xl) {
+                        margin-top: 32px;
+                    }
+                }
+
+                p,
+                a {
+                    font-family: $font-secondary;
+                    font-weight: $extra-light;
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    color: $color-white;
+                    line-height: 110%;
+                    width: fit-content;
+
+                    @media screen and (min-width:$screen-md) {
+                        font-size: 32px;
+                    }
+
+                    @media screen and (min-width:$screen-xl) {
+                        font-size: 40px;
+                    }
+                }
+
+                a {
+                    border-bottom: 1px solid transparent;
+                    transition: $transition;
+
+                    &:hover {
+                        border-bottom: 1px solid $color-white;
+                    }
+                }
+            }
+        }
+    }
+}

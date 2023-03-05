@@ -1,0 +1,7 @@
+@import "../../styles/general/variable";
+
+.layout-wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -30,11 +30,11 @@ a {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	color: $color-white;
+	color: $color-brand;
 
 	&:hover {
 		text-decoration: none;
-		color: $color-white;
+		color: $color-black2;
 	}
 }
 
@@ -42,7 +42,7 @@ h1 {
 	font-family: $font-secondary;
 	font-size: 40px;
 	line-height: 110%;
-	color: $color-white;
+	color: $color-brand;
 
 	@media screen and (min-width:$screen-md) {
 		font-size: 72px;
@@ -301,6 +301,30 @@ p {
 	height: 1px;
 	width: 100%;
 	background-color: $color-black2;
+}
+
+.container {
+    padding: 0 20px;
+    max-width: 100%;
+	margin: 0 auto;
+
+    @media screen and (min-width: calc($screen-md)) {
+        padding: 0 20px;
+        max-width: 744px;
+    }
+
+    @media screen and (min-width: calc($screen-xl)) {
+        padding: 0;
+        max-width: 1120px;
+    }
+
+    @media screen and (min-width: calc($screen-2xl)) {
+        max-width: 1216px;
+    }
+
+    @media screen and (min-width: calc($screen-3xl)) {
+        max-width: 1312px;
+    }
 }
 
 .slick-slider {
