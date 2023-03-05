@@ -1,0 +1,380 @@
+@import "./variable";
+@import "./mixins";
+
+:root {
+	scroll-behavior: auto;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: 16px;
+	font-family: $font-base;
+	line-height: 140%;
+	color: $color-grey;
+	background-color: $color-black;
+	margin: 0;
+	padding: 0;
+
+	* {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+}
+
+a {
+	text-decoration: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: $color-white;
+
+	&:hover {
+		text-decoration: none;
+		color: $color-white;
+	}
+}
+
+h1 {
+	font-family: $font-secondary;
+	font-size: 40px;
+	line-height: 110%;
+	color: $color-white;
+
+	@media screen and (min-width:$screen-md) {
+		font-size: 72px;
+	}
+
+	@media screen and (min-width:$screen-xl) {
+		font-size: 104px;
+	}
+}
+
+h2 {
+	font-family: $font-secondary;
+	font-weight: $extra-light;
+	font-size: 32px;
+	color: $color-white;
+	line-height: 110%;
+
+	@media screen and (min-width:$screen-md) {
+		font-size: 48px;
+	}
+
+	@media screen and (min-width:$screen-xl) {
+		font-size: 56px;
+	}
+}
+
+h3 {
+	font-family: $font-secondary;
+	font-weight: $extra-light;
+	font-size: 24px;
+	color: $color-white;
+	line-height: 110%;
+
+	@media screen and (min-width:$screen-md) {
+		font-size: 32px;
+	}
+}
+
+p {
+	font-size: 14px;
+	font-family: $font-base;
+	font-weight: $normal;
+	line-height: 140%;
+	color: $color-grey;
+
+	strong {
+		font-weight: $semi-bold;
+		color: $color-white;
+	}
+
+
+	@media screen and (min-width:$screen-md) {
+		font-size: 16px;
+	}
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 48px;
+	width: 100%;
+	font-family: $font-base;
+	font-weight: $semi-bold;
+	color: $color-black;
+	font-size: 12px;
+	line-height: normal;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0px 24px;
+	background-color: $color-white;
+	border: 1px solid $color-white;
+	transition: $transition;
+
+	@media screen and (min-width:$screen-md) {
+		height: 56px;
+	}
+
+	&:hover {
+		background-color: $color-black;
+		color: $color-white;
+	}
+}
+
+.button-black {
+	background-color: $color-black;
+	color: $color-white;
+
+	&:hover {
+		background-color: $color-white;
+		color: $color-black;
+	}
+}
+
+.cta-link {
+	font-family: $font-base;
+	font-weight: $semi-bold;
+	font-size: 12px;
+	line-height: 140%;
+	color: $color-white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+
+	&::before {
+		position: relative;
+		display: inline-block;
+		margin-right: 16px;
+		vertical-align: middle;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		content: "";
+		min-height: 16px;
+		min-width: 16px;
+		background-image: url('../../images/icons/plus.svg');
+		transition: $transition;
+	}
+
+	span {
+		transition: $transition;
+		border-bottom: 1px solid transparent;
+		padding-bottom: 2px;
+		position: relative;
+		// top: 2px;
+	}
+
+	&:hover {
+		span {
+			border-bottom: 1px solid $color-grey;
+		}
+
+		&::before {
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.play-button {
+	background-color: $color-white;
+	height: 56px;
+	width: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: $transition;
+
+	@media screen and (min-width:$screen-md) {
+		height: 64px;
+		width: 64px;
+	}
+
+	&::after {
+		display: inline-block;
+		vertical-align: middle;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		content: "";
+		background-image: url('../../images/icons/play-icon.svg');
+		height: 16px;
+		width: 16px;
+		transition: $transition;
+
+		@media screen and (min-width:$screen-md) {
+			height: 24px;
+			width: 24px;
+		}
+	}
+
+	&:hover {
+		background-color: $color-grey2;
+	}
+}
+
+.section-m-120 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+
+	@media screen and (min-width:$screen-md) {
+		margin-top: 56px;
+		margin-bottom: 56px;
+	}
+
+	@media screen and (min-width:$screen-xl) {
+		margin-top: 120px;
+		margin-bottom: 120px;
+	}
+}
+
+.section-m-160 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+
+	@media screen and (min-width:$screen-md) {
+		margin-top: 56px;
+		margin-bottom: 56px;
+	}
+
+	@media screen and (min-width:$screen-xl) {
+		margin-top: 160px;
+		margin-bottom: 160px;
+	}
+}
+
+.section-p-120 {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	@media screen and (min-width:$screen-md) {
+		padding-top: 56px;
+		padding-bottom: 56px;
+	}
+
+	@media screen and (min-width:$screen-xl) {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+}
+
+.section-p-160 {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	@media screen and (min-width:$screen-md) {
+		padding-top: 56px;
+		padding-bottom: 56px;
+	}
+
+	@media screen and (min-width:$screen-xl) {
+		padding-top: 160px;
+		padding-bottom: 160px;
+	}
+}
+
+.img-zoom {
+	position: relative;
+	overflow: hidden;
+
+	img {
+		transition: all 0.4s ease-in-out;
+		transform: scale(1);
+		object-fit: cover;
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.05);
+		}
+	}
+}
+
+.horizontal-divider {
+	height: 1px;
+	width: 100%;
+	background-color: $color-black2;
+}
+
+.slick-slider {
+
+	.slick-list {
+		overflow: hidden;
+		margin: 0 -8px;
+
+		@media screen and (min-width:$screen-xl) {
+			margin: 0 -16px;
+		}
+	}
+
+	.slick-track {
+		display: flex;
+
+		margin-left: 0;
+		margin-right: 0;
+
+		.slick-slide {
+			display: flex;
+			flex-direction: column;
+			height: auto;
+			padding: 0 8px;
+
+			@media screen and (min-width:$screen-xl) {
+				padding: 0 16px;
+			}
+
+			>div {
+				height: 100%;
+			}
+		}
+	}
+
+	.slick-dots {
+		position: relative;
+		display: flex !important;
+		bottom: unset;
+		height: 6px;
+		margin-top: 32px;
+
+		@media screen and (min-width:$screen-md) {
+			margin-top: 48px;
+		}
+
+		li {
+			margin: 0px;
+			margin-left: 16px;
+			display: flex;
+			width: 8px;
+			height: 8px;
+
+			&:first-of-type {
+				margin-left: 0px;
+			}
+
+			button {
+				width: 100%;
+				height: 100%;
+				padding: 0px;
+				background-color: $color-black2;
+				transition: $transition;
+
+				&::before {
+					display: none !important;
+				}
+			}
+		}
+
+		li.slick-active {
+			button {
+				background-color: $color-white;
+			}
+		}
+	}
+}
